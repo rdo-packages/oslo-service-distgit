@@ -1,8 +1,10 @@
 %global pypi_name oslo.service
 
+%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+
 Name:           python-oslo-service
-Version:        XXX
-Release:        XXX
+Version:        0.3.0
+Release:        1%{?dist}
 Summary:        Oslo service library
 
 License:        ASL 2.0
@@ -14,6 +16,7 @@ BuildRequires:  python2-devel
 BuildRequires:  python-pbr
 BuildRequires:  python-sphinx
 BuildRequires:  python-oslo-sphinx
+BuildRequires:  python-monotonic
 
 
 Requires:       python-babel
@@ -31,14 +34,14 @@ Library for running OpenStack services
 %prep
 %setup -q -n %{pypi_name}-%{upstream_version}
 
+
+%build
+%{__python2} setup.py build
+
 # generate html docs 
 sphinx-build doc/source html
 # remove the sphinx-build leftovers
 rm -rf html/.{doctrees,buildinfo}
-
-
-%build
-%{__python2} setup.py build
 
 
 %install
@@ -52,3 +55,5 @@ rm -rf html/.{doctrees,buildinfo}
 %{python2_sitelib}/*.egg-info
 
 %changelog
+* Mon Jul 06 2015 Alan Pevec <alan.pevec@redhat.com> 0.3.0-1
+- Update to upstream 0.3.0
