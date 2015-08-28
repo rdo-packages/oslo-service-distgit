@@ -17,12 +17,19 @@ BuildRequires:  python-oslo-sphinx
 
 
 Requires:       python-babel
+Requires:       python-greenlet
 Requires:       python-eventlet >= 0.17.3
 Requires:       python-monotonic >= 0.1
+Requires:       python-oslo-concurrency
+Requires:       python-oslo-log
 Requires:       python-oslo-config >= 1.11.0
 Requires:       python-oslo-i18n
 Requires:       python-oslo-utils >= 1.6.0
+Requires:       python-paste
+Requires:       python-paste-deploy
+Requires:       python-routes
 Requires:       python-six >= 1.9.0
+Requires:       python-webob >= 1.2.3
 
 %description
 Library for running OpenStack services
