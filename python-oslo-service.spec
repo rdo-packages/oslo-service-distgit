@@ -13,6 +13,7 @@ BuildArch:      noarch
 BuildRequires:  python2-devel
 BuildRequires:  python-pbr
 BuildRequires:  python-sphinx
+BuildRequires:  python-oslo-config
 BuildRequires:  python-oslo-sphinx
 
 
