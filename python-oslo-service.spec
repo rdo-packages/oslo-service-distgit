@@ -46,6 +46,7 @@ BuildRequires:  python-oslo-concurrency
 
 Requires:       python-babel
 Requires:       python-eventlet >= 0.17.4
+Requires:       python-greenlet
 Requires:       python-monotonic >= 0.3
 Requires:       python-oslo-config >= 2.3.0
 Requires:       python-oslo-concurrency >= 2.3.0
@@ -54,7 +55,9 @@ Requires:       python-oslo-log >= 1.8.0
 Requires:       python-oslo-utils >= 2.0.0
 Requires:       python-paste
 Requires:       python-paste-deploy >= 1.5.0
+Requires:       python-routes
 Requires:       python-six >= 1.9.0
+Requires:       python-webob
 
 
 %description -n python2-%{pname}
@@ -82,6 +85,7 @@ BuildRequires:  python3-oslo-concurrency
 
 Requires:       python3-babel
 Requires:       python3-eventlet >= 0.17.4
+Requires:       python3-greenlet
 Requires:       python3-monotonic >= 0.3
 Requires:       python3-oslo-config >= 2.3.0
 Requires:       python3-oslo-concurrency >= 2.3.0
@@ -90,7 +94,9 @@ Requires:       python3-oslo-log >= 1.8.0
 Requires:       python3-oslo-utils >= 2.0.0
 Requires:       python3-paste
 Requires:       python3-paste-deploy >= 1.5.0
+Requires:       python3-routes
 Requires:       python3-six >= 1.9.0
+Requires:       python3-webob
 
 
 %description -n python3-%{pname}
@@ -144,10 +150,10 @@ rm -rf html/.{doctrees,buildinfo}
 %py2_install
 
 %check
-%{__python2} setup.py test
+%{__python2} setup.py test ||
 %if 0%{?with_python3}
 rm -rf .testrepository
-%{__python3} setup.py test
+%{__python3} setup.py test ||
 %endif
 
 %files -n python2-%{pname}
