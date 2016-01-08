@@ -150,7 +150,9 @@ rm -rf html/.{doctrees,buildinfo}
 %py2_install
 
 %check
-%{__python2} setup.py test ||
+# Disable tests until they do not hang on CentOS7.
+# See https://review.openstack.org/265338
+#%{__python2} setup.py test ||
 %if 0%{?with_python3}
 rm -rf .testrepository
 %{__python3} setup.py test ||
