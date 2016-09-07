@@ -8,7 +8,7 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:           python-%{pname}
-Version:        1.7.0
+Version:        1.8.0
 Release:        1%{?dist}
 Summary:        Oslo service library
 
@@ -184,6 +184,9 @@ rm -rf .testrepository
 %{python2_sitelib}/oslo_service/tests
 
 %changelog
+* Wed Sep 07 2016 Haikel Guemar <hguemar@fedoraproject.org> 1.8.0-1
+- Update to 1.8.0
+
 * Wed Mar 23 2016 Haikel Guemar <hguemar@fedoraproject.org> 1.7.0-
 - Update to 1.7.0
 
