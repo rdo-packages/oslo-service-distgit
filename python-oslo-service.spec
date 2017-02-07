@@ -182,3 +182,4 @@ rm -rf .testrepository
 %{python2_sitelib}/oslo_service/tests
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/oslo.service/commit/?id=808c13c0db4399e6750c1429d3ef0aa4f1ba08eb
