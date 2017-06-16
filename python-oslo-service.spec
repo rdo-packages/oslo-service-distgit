@@ -64,6 +64,25 @@ Requires:       python-webob
 %description -n python2-%{pname}
 Library for running OpenStack services
 
+%package -n python2-%{pname}-tests
+Summary:        Oslo service tests
+%{?python_provide:%python_provide python2-%{pname}-tests}
+
+Requires:  python-%{pname} = %{version}-%{release}
+Requires:  procps-ng
+Requires:  python-fixtures
+Requires:  python-hacking
+Requires:  python-mock
+Requires:  python-requests
+Requires:  python-routes
+Requires:  python-oslotest
+Requires:  python-oslo-log
+Requires:  python-oslo-utils
+Requires:  python-oslo-concurrency
+
+%description -n python2-%{pname}-tests
+Tests for oslo.service
+
 
 %if 0%{?with_python3}
 %package -n     python3-%{pname}
@@ -103,28 +122,31 @@ Requires:       python3-webob
 %description -n python3-%{pname}
 Library for running OpenStack services
 %endif
+%package -n python3-%{pname}-tests
+Summary:        Oslo service tests
+%{?python_provide:%python_provide python3-%{pname}-tests}
+
+Requires:  python3-%{pname} = %{version}-%{release}
+Requires:  procps-ng
+Requires:  python3-fixtures
+Requires:  python3-hacking
+Requires:  python3-mock
+Requires:  python3-requests
+Requires:  python3-routes
+Requires:  python3-oslotest
+Requires:  python3-oslo-log
+Requires:  python3-oslo-utils
+Requires:  python3-oslo-concurrency
+
+%description -n python3-%{pname}-tests
+Tests for oslo.service
+%endif
+
 
 %package -n python-%{pname}-doc
 Summary:        Oslo service documentation
 %description -n python-%{pname}-doc
 Documentation for oslo.service
-
-%package -n python-%{pname}-tests
-Summary:        Oslo service tests
-%description -n python-%{pname}-tests
-Tests for oslo.service
-
-Requires:  python-%{pname} = %{version}-%{release}
-Requires:  procps-ng
-Requires:  python-fixtures
-Requires:  python-hacking
-Requires:  python-mock
-Requires:  python-requests
-Requires:  python-routes
-Requires:  python-oslotest
-Requires:  python-oslo-log
-Requires:  python-oslo-utils
-Requires:  python-oslo-concurrency
 
 %description
 Library for running OpenStack services
@@ -166,6 +188,9 @@ rm -rf .testrepository
 %{python2_sitelib}/*.egg-info
 %exclude %{python2_sitelib}/oslo_service/tests
 
+%files -n python2-%{pname}-tests
+%{python2_sitelib}/oslo_service/tests
+
 %if 0%{?with_python3}
 %files -n python3-%{pname}
 %doc README.rst
@@ -173,13 +198,13 @@ rm -rf .testrepository
 %{python3_sitelib}/oslo_service
 %{python3_sitelib}/*.egg-info
 %exclude %{python3_sitelib}/oslo_service/tests
+
+%files -n python3-%{pname}-tests
+%{python3_sitelib}/oslo_service/tests
 %endif
 
 %files -n python-%{pname}-doc
 %doc html
 %license LICENSE
-
-%files -n python-%{pname}-tests
-%{python2_sitelib}/oslo_service/tests
 
 %changelog
