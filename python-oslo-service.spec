@@ -8,7 +8,7 @@
 
 Name:           python-%{pname}
 Version:        1.19.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Oslo service library
 
 License:        ASL 2.0
@@ -208,6 +208,9 @@ rm -rf .testrepository
 %license LICENSE
 
 %changelog
+* Fri Jun 16 2017 Haïkel Guémar <hguemar@fedoraproject.org> - 1.19.0-2
+- Fix python tests subpackages
+
 * Wed Feb 08 2017 Alfredo Moralejo <amoralej@redhat.com> 1.19.0-1
 - Update to 1.19.0
 
