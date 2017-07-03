@@ -23,8 +23,9 @@ Summary:        Oslo service library
 BuildRequires:  python2-devel
 BuildRequires:  python-setuptools
 BuildRequires:  python-pbr >= 1.3
+BuildRequires:  git
 BuildRequires:  python-sphinx
-BuildRequires:  python-oslo-sphinx
+BuildRequires:  python-openstackdocstheme
 BuildRequires:  python-oslo-i18n
 BuildRequires:  python-paste
 BuildRequires:  python-paste-deploy
@@ -152,7 +153,7 @@ Documentation for oslo.service
 Library for running OpenStack services
 
 %prep
-%setup -q -n %{pypi_name}-%{upstream_version}
+%autosetup -n %{pypi_name}-%{upstream_version} -S git
 
 %build
 %py2_build
@@ -160,9 +161,9 @@ Library for running OpenStack services
 %py3_build
 %endif
 # generate html docs
-sphinx-build doc/source html
+%{__python2} setup.py build_sphinx -b html
 # remove the sphinx-build leftovers
-rm -rf html/.{doctrees,buildinfo}
+rm -rf doc/build/html/.{doctrees,buildinfo}
 
 %install
 # Must do the subpackages' install first because the scripts in /usr/bin are
@@ -204,7 +205,7 @@ rm -rf .testrepository
 %endif
 
 %files -n python-%{pname}-doc
-%doc html
+%doc doc/build/html
 %license LICENSE
 
 %changelog
