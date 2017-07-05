@@ -7,7 +7,7 @@
 %endif
 
 Name:           python-%{pname}
-Version:        1.19.0
+Version:        1.19.1
 Release:        1%{?dist}
 Summary:        Oslo service library
 
@@ -208,6 +208,9 @@ rm -rf .testrepository
 %license LICENSE
 
 %changelog
+* Wed Jul 05 2017 rdo-trunk <javier.pena@redhat.com> 1.19.1-1
+- Update to 1.19.1
+
 * Wed Feb 08 2017 Alfredo Moralejo <amoralej@redhat.com> 1.19.0-1
 - Update to 1.19.0
 
