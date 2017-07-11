@@ -7,7 +7,7 @@
 %endif
 
 Name:           python-%{pname}
-Version:        1.16.0
+Version:        1.16.1
 Release:        1%{?dist}
 Summary:        Oslo service library
 
@@ -183,6 +183,9 @@ rm -rf .testrepository
 %{python2_sitelib}/oslo_service/tests
 
 %changelog
+* Tue Jul 11 2017 rdo-trunk <javier.pena@redhat.com> 1.16.1-1
+- Update to 1.16.1
+
 * Wed Sep 07 2016 Haikel Guemar <hguemar@fedoraproject.org> 1.16.0-1
 - Update to 1.16.0
 
