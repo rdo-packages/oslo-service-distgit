@@ -209,3 +209,4 @@ rm -rf .testrepository
 %license LICENSE
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/oslo.service/commit/?id=ca3a40a3df93c1968a9dd4f5660abce9c8f25c41
