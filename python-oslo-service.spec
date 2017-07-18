@@ -45,6 +45,7 @@ BuildRequires:  python-oslotest
 BuildRequires:  python-oslo-log
 BuildRequires:  python-oslo-utils
 BuildRequires:  python-oslo-concurrency
+BuildRequires:  python-webob
 
 Requires:       python-babel
 Requires:       python-eventlet >= 0.17.4
