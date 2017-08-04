@@ -46,15 +46,14 @@ BuildRequires:  python-oslo-log
 BuildRequires:  python-oslo-utils
 BuildRequires:  python-oslo-concurrency
 
-Requires:       python-babel
-Requires:       python-eventlet >= 0.17.4
+Requires:       python-eventlet >= 0.18.2
 Requires:       python-greenlet
-Requires:       python-monotonic >= 0.3
-Requires:       python-oslo-config >= 2:3.14.0
+Requires:       python-monotonic >= 0.6
+Requires:       python-oslo-config >= 2:4.0.0
 Requires:       python-oslo-concurrency >= 3.8.0
 Requires:       python-oslo-i18n >= 2.1.0
-Requires:       python-oslo-log >= 3.11.0
-Requires:       python-oslo-utils >= 3.18.0
+Requires:       python-oslo-log >= 3.22.0
+Requires:       python-oslo-utils >= 3.20.0
 Requires:       python-paste
 Requires:       python-paste-deploy >= 1.5.0
 Requires:       python-routes
@@ -77,9 +76,6 @@ Requires:  python-mock
 Requires:  python-requests
 Requires:  python-routes
 Requires:  python-oslotest
-Requires:  python-oslo-log
-Requires:  python-oslo-utils
-Requires:  python-oslo-concurrency
 
 %description -n python2-%{pname}-tests
 Tests for oslo.service
@@ -104,15 +100,14 @@ BuildRequires:  python3-oslo-log
 BuildRequires:  python3-oslo-utils
 BuildRequires:  python3-oslo-concurrency
 
-Requires:       python3-babel
-Requires:       python3-eventlet >= 0.17.4
+Requires:       python3-eventlet >= 0.18.2
 Requires:       python3-greenlet
-Requires:       python3-monotonic >= 0.3
-Requires:       python3-oslo-config >= 2:3.14.0
+Requires:       python3-monotonic >= 0.6
+Requires:       python3-oslo-config >= 2:4.0.0
 Requires:       python3-oslo-concurrency >= 3.8.0
 Requires:       python3-oslo-i18n >= 2.1.0
-Requires:       python3-oslo-log >= 3.11.0
-Requires:       python3-oslo-utils >= 3.18.0
+Requires:       python3-oslo-log >= 3.22.0
+Requires:       python3-oslo-utils >= 3.20.0
 Requires:       python3-paste
 Requires:       python3-paste-deploy >= 1.5.0
 Requires:       python3-routes
@@ -135,9 +130,6 @@ Requires:  python3-mock
 Requires:  python3-requests
 Requires:  python3-routes
 Requires:  python3-oslotest
-Requires:  python3-oslo-log
-Requires:  python3-oslo-utils
-Requires:  python3-oslo-concurrency
 
 %description -n python3-%{pname}-tests
 Tests for oslo.service
