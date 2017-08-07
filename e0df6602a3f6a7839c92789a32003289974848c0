@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a890539_821468f6",
+        "filename": "python-oslo-service.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 87
+      },
+      "writtenOn": "2017-08-07T17:44:56Z",
+      "side": 1,
+      "message": "Incorrect pbr lower version\nhttps://github.com/openstack/oslo.service/blob/master/setup.py#L28",
+      "revId": "e0df6602a3f6a7839c92789a32003289974848c0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
