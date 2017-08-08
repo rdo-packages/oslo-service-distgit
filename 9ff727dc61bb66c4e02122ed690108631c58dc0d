@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a890539_d621d5b5",
+        "filename": "python-oslo-service.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2017-08-08T10:44:51Z",
+      "side": 1,
+      "message": "For consistency, if you are using \u003e\u003d 2.0.0 in line 25, do the same here.",
+      "revId": "9ff727dc61bb66c4e02122ed690108631c58dc0d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
