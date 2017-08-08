@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a890539_f66b3183",
+        "filename": "python-oslo-service.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2017-08-08T07:45:31Z",
+      "side": 1,
+      "message": "Need a space after \u0027\u003e\u003d\u0027",
+      "revId": "0c83a627c3f703d688d124d9a9dad2406ed55f11",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a890539_d66e3596",
+        "filename": "python-oslo-service.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2017-08-08T07:45:31Z",
+      "side": 1,
+      "message": "Fix here or totally remove versions in BuildRequires",
+      "range": {
+        "startLine": 91,
+        "startChar": 28,
+        "endLine": 91,
+        "endChar": 34
+      },
+      "revId": "0c83a627c3f703d688d124d9a9dad2406ed55f11",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
