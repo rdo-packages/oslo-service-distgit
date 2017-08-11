@@ -7,8 +7,8 @@
 %endif
 
 Name:           python-%{pname}
-Version:        XXX
-Release:        XXX
+Version:        1.25.0
+Release:        1%{?dist}
 Summary:        Oslo service library
 
 License:        ASL 2.0
@@ -202,3 +202,6 @@ rm -rf .testrepository
 %license LICENSE
 
 %changelog
+* Fri Aug 11 2017 Alfredo Moralejo <amoralej@redhat.com> 1.25.0-1
+- Update to 1.25.0
+
