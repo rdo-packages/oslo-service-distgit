@@ -6,6 +6,12 @@
 %global with_python3 1
 %endif
 
+%global common_desc \
+Library for running OpenStack services
+
+%global common_desc1 \
+Tests for oslo.service
+
 Name:           python-%{pname}
 Version:        XXX
 Release:        XXX
@@ -63,7 +69,7 @@ Requires:       python-webob
 
 
 %description -n python2-%{pname}
-Library for running OpenStack services
+%{common_desc}
 
 %package -n python2-%{pname}-tests
 Summary:        Oslo service tests
@@ -79,7 +85,7 @@ Requires:  python-routes
 Requires:  python-oslotest
 
 %description -n python2-%{pname}-tests
-Tests for oslo.service
+%{common_desc1}
 
 
 %if 0%{?with_python3}
@@ -117,7 +123,7 @@ Requires:       python3-webob
 
 
 %description -n python3-%{pname}
-Library for running OpenStack services
+%{common_desc}
 
 %package -n python3-%{pname}-tests
 Summary:        Oslo service tests
@@ -133,7 +139,7 @@ Requires:  python3-routes
 Requires:  python3-oslotest
 
 %description -n python3-%{pname}-tests
-Tests for oslo.service
+%{common_desc1}
 %endif
 
 
@@ -143,7 +149,7 @@ Summary:        Oslo service documentation
 Documentation for oslo.service
 
 %description
-Library for running OpenStack services
+%{common_desc}
 
 %prep
 %autosetup -n %{pypi_name}-%{upstream_version} -S git
