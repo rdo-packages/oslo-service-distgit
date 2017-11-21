@@ -7,7 +7,7 @@
 %endif
 
 Name:           python-%{pname}
-Version:        1.25.0
+Version:        1.25.1
 Release:        1%{?dist}
 Summary:        Oslo service library
 
@@ -202,6 +202,9 @@ rm -rf .testrepository
 %license LICENSE
 
 %changelog
+* Tue Nov 21 2017 RDO <dev@lists.rdoproject.org> 1.25.1-1
+- Update to 1.25.1
+
 * Fri Aug 11 2017 Alfredo Moralejo <amoralej@redhat.com> 1.25.0-1
 - Update to 1.25.0
 
