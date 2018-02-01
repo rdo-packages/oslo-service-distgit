@@ -27,43 +27,57 @@ Summary:        Oslo service library
 %{?python_provide:%python_provide python2-%{pname}}
 
 BuildRequires:  python2-devel
-BuildRequires:  python-setuptools
-BuildRequires:  python-pbr >= 2.0.0
+BuildRequires:  python2-setuptools
+BuildRequires:  python2-pbr >= 2.0.0
 BuildRequires:  git
-BuildRequires:  python-oslo-i18n
-BuildRequires:  python-paste
-BuildRequires:  python-paste-deploy
-BuildRequires:  python-eventlet
-BuildRequires:  python-monotonic
-BuildRequires:  python-six
+BuildRequires:  python2-oslo-i18n
+BuildRequires:  python2-eventlet
+BuildRequires:  python2-six
 # Required for documentation build
-BuildRequires:  python-oslo-config
+BuildRequires:  python2-oslo-config
 # Required for tests
 BuildRequires:  procps-ng
-BuildRequires:  python-fixtures
-BuildRequires:  python-hacking
-BuildRequires:  python-mock
-BuildRequires:  python-requests
-BuildRequires:  python-routes
-BuildRequires:  python-oslotest
-BuildRequires:  python-oslo-log
-BuildRequires:  python-oslo-utils
-BuildRequires:  python-oslo-concurrency
+BuildRequires:  python2-fixtures
+BuildRequires:  python2-hacking
+BuildRequires:  python2-mock
+BuildRequires:  python2-requests
+BuildRequires:  python2-routes
+BuildRequires:  python2-oslotest
+BuildRequires:  python2-oslo-log
+BuildRequires:  python2-oslo-utils
+BuildRequires:  python2-oslo-concurrency
+%if 0%{?fedora} > 0
+BuildRequires:  python2-paste
+BuildRequires:  python2-paste-deploy
+BuildRequires:  python2-monotonic
+BuildRequires:  python2-webob
+%else
+BuildRequires:  python-paste
+BuildRequires:  python-paste-deploy
+BuildRequires:  python-monotonic
 BuildRequires:  python-webob
+%endif
 
-Requires:       python-eventlet >= 0.18.2
-Requires:       python-greenlet
-Requires:       python-monotonic >= 0.6
-Requires:       python-oslo-config >= 2:4.0.0
-Requires:       python-oslo-concurrency >= 3.8.0
-Requires:       python-oslo-i18n >= 2.1.0
-Requires:       python-oslo-log >= 3.22.0
-Requires:       python-oslo-utils >= 3.20.0
+Requires:       python2-eventlet >= 0.18.2
+Requires:       python2-greenlet
+Requires:       python2-oslo-config >= 2:5.1.0
+Requires:       python2-oslo-concurrency >= 3.25.0
+Requires:       python2-oslo-i18n >= 3.15.3
+Requires:       python2-oslo-log >= 3.36.0
+Requires:       python2-oslo-utils >= 3.33.0
+Requires:       python2-routes
+Requires:       python2-six >= 1.10.0
+%if 0%{?fedora} > 0
+Requires:       python2-paste
+Requires:       python2-paste-deploy >= 1.5.0
+Requires:       python2-monotonic >= 0.6
+Requires:       python2-webob
+%else
 Requires:       python-paste
 Requires:       python-paste-deploy >= 1.5.0
-Requires:       python-routes
-Requires:       python-six >= 1.9.0
+Requires:       python-monotonic >= 0.6
 Requires:       python-webob
+%endif
 
 
 %description -n python2-%{pname}
@@ -73,14 +87,14 @@ Requires:       python-webob
 Summary:        Oslo service tests
 %{?python_provide:%python_provide python2-%{pname}-tests}
 
-Requires:  python-%{pname} = %{version}-%{release}
+Requires:  python2-%{pname} = %{version}-%{release}
 Requires:  procps-ng
-Requires:  python-fixtures
-Requires:  python-hacking
-Requires:  python-mock
-Requires:  python-requests
-Requires:  python-routes
-Requires:  python-oslotest
+Requires:  python2-fixtures
+Requires:  python2-hacking
+Requires:  python2-mock
+Requires:  python2-requests
+Requires:  python2-routes
+Requires:  python2-oslotest
 
 %description -n python2-%{pname}-tests
 %{common_desc1}
@@ -108,15 +122,15 @@ BuildRequires:  python3-oslo-concurrency
 Requires:       python3-eventlet >= 0.18.2
 Requires:       python3-greenlet
 Requires:       python3-monotonic >= 0.6
-Requires:       python3-oslo-config >= 2:4.0.0
-Requires:       python3-oslo-concurrency >= 3.8.0
-Requires:       python3-oslo-i18n >= 2.1.0
-Requires:       python3-oslo-log >= 3.22.0
-Requires:       python3-oslo-utils >= 3.20.0
+Requires:       python3-oslo-config >= 2:5.1.0
+Requires:       python3-oslo-concurrency >= 3.25.0
+Requires:       python3-oslo-i18n >= 3.15.3
+Requires:       python3-oslo-log >= 3.36.0
+Requires:       python3-oslo-utils >= 3.33.0
 Requires:       python3-paste
 Requires:       python3-paste-deploy >= 1.5.0
 Requires:       python3-routes
-Requires:       python3-six >= 1.9.0
+Requires:       python3-six >= 1.10.0
 Requires:       python3-webob
 
 
