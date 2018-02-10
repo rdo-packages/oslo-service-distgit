@@ -13,8 +13,8 @@ Library for running OpenStack services
 Tests for oslo.service
 
 Name:           python-%{pname}
-Version:        XXX
-Release:        XXX
+Version:        1.29.0
+Release:        1%{?dist}
 Summary:        Oslo service library
 
 License:        ASL 2.0
@@ -230,3 +230,6 @@ rm -rf .testrepository
 %endif
 
 %changelog
+* Sat Feb 10 2018 RDO <dev@lists.rdoproject.org> 1.29.0-1
+- Update to 1.29.0
+
