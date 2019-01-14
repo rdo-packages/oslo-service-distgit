@@ -2,7 +2,7 @@
 %global pypi_name oslo.service
 %global pname oslo-service
 %global with_doc 1
-%if 0%{?fedora} >= 24
+%if 0%{?fedora} >= 24 || 0%{?rhel} > 7
 %global with_python3 1
 %endif
 
@@ -46,7 +46,7 @@ BuildRequires:  python2-oslotest
 BuildRequires:  python2-oslo-log
 BuildRequires:  python2-oslo-utils
 BuildRequires:  python2-oslo-concurrency
-%if 0%{?fedora} > 0
+%if 0%{?fedora} || 0%{?rhel} > 7
 BuildRequires:  python2-paste
 BuildRequires:  python2-paste-deploy
 BuildRequires:  python2-monotonic
@@ -67,7 +67,7 @@ Requires:       python2-oslo-log >= 3.36.0
 Requires:       python2-oslo-utils >= 3.33.0
 Requires:       python2-routes
 Requires:       python2-six >= 1.10.0
-%if 0%{?fedora} > 0
+%if 0%{?fedora} || 0%{?rhel} > 7
 Requires:       python2-paste
 Requires:       python2-paste-deploy >= 1.5.0
 Requires:       python2-monotonic >= 0.6
