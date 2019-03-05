@@ -65,10 +65,11 @@ Requires:       python2-oslo-config >= 2:5.1.0
 Requires:       python2-oslo-concurrency >= 3.25.0
 Requires:       python2-oslo-i18n >= 3.15.3
 Requires:       python2-oslo-log >= 3.36.0
-Requires:       python2-oslo-utils >= 3.33.0
+Requires:       python2-oslo-utils >= 3.40.2
 Requires:       python2-routes
 Requires:       python2-six >= 1.10.0
 Requires:       python2-yappi
+Requires:       python2-debtcollector
 %if 0%{?fedora} || 0%{?rhel} > 7
 Requires:       python2-paste
 Requires:       python2-paste-deploy >= 1.5.0
@@ -124,18 +125,18 @@ BuildRequires:  python3-yappi
 
 Requires:       python3-eventlet >= 0.18.2
 Requires:       python3-greenlet
-Requires:       python3-monotonic >= 0.6
 Requires:       python3-oslo-config >= 2:5.1.0
 Requires:       python3-oslo-concurrency >= 3.25.0
 Requires:       python3-oslo-i18n >= 3.15.3
 Requires:       python3-oslo-log >= 3.36.0
-Requires:       python3-oslo-utils >= 3.33.0
+Requires:       python3-oslo-utils >= 3.40.2
 Requires:       python3-paste
 Requires:       python3-paste-deploy >= 1.5.0
 Requires:       python3-routes
 Requires:       python3-six >= 1.10.0
 Requires:       python3-webob
 Requires:       python3-yappi
+Requires:       python3-debtcollector
 
 
 %description -n python3-%{pname}
