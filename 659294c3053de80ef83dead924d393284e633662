@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f76c787c_1de1bb32",
+        "filename": "python-oslo-service.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2019-10-01T15:45:29Z",
+      "side": 1,
+      "message": "monotonic is only needed in python2.\n\nhttps://github.com/openstack/oslo.service/blob/master/requirements.txt#L10",
+      "range": {
+        "startLine": 79,
+        "startChar": 31,
+        "endLine": 79,
+        "endChar": 40
+      },
+      "revId": "659294c3053de80ef83dead924d393284e633662",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
