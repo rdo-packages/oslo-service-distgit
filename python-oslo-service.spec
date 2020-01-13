@@ -13,7 +13,7 @@ Library for running OpenStack services
 Tests for oslo.service
 
 Name:           python-%{pname}
-Version:        1.38.0
+Version:        1.38.1
 Release:        1%{?dist}
 Summary:        Oslo service library
 
@@ -235,6 +235,9 @@ rm -rf .testrepository
 %endif
 
 %changelog
+* Mon Jan 13 2020 RDO <dev@lists.rdoproject.org> 1.38.1-1
+- Update to 1.38.1
+
 * Fri Mar 08 2019 RDO <dev@lists.rdoproject.org> 1.38.0-1
 - Update to 1.38.0
 
