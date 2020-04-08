@@ -65,7 +65,7 @@ BuildRequires:  python%{pyver}-paste
 BuildRequires:  python%{pyver}-paste-deploy
 %endif
 
-Requires:       python%{pyver}-eventlet >= 0.18.2
+Requires:       python%{pyver}-eventlet >= 0.22.0
 Requires:       python%{pyver}-greenlet
 Requires:       python%{pyver}-oslo-config >= 2:5.1.0
 Requires:       python%{pyver}-oslo-concurrency >= 3.25.0
