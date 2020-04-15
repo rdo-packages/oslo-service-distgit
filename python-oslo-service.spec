@@ -1,14 +1,3 @@
-# Macros for py2/py3 compatibility
-%if 0%{?fedora} || 0%{?rhel} > 7
-%global pyver %{python3_pkgversion}
-%else
-%global pyver 2
-%endif
-%global pyver_bin python%{pyver}
-%global pyver_sitelib %python%{pyver}_sitelib
-%global pyver_install %py%{pyver}_install
-%global pyver_build %py%{pyver}_build
-# End of macros for py2/py3 compatibility
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 %global pypi_name oslo.service
 %global pname oslo-service
@@ -30,88 +19,76 @@ URL:            http://launchpad.net/oslo
 Source0:        https://tarballs.openstack.org/%{pypi_name}/%{pypi_name}-%{upstream_version}.tar.gz
 BuildArch:      noarch
 
-%package -n     python%{pyver}-%{pname}
+%package -n     python3-%{pname}
 Summary:        Oslo service library
-%{?python_provide:%python_provide python%{pyver}-%{pname}}
+%{?python_provide:%python_provide python3-%{pname}}
 
-BuildRequires:  python%{pyver}-devel
-BuildRequires:  python%{pyver}-setuptools
-BuildRequires:  python%{pyver}-pbr >= 2.0.0
+BuildRequires:  python3-devel
+BuildRequires:  python3-setuptools
+BuildRequires:  python3-pbr >= 2.0.0
 BuildRequires:  git
-BuildRequires:  python%{pyver}-oslo-i18n
-BuildRequires:  python%{pyver}-eventlet
-BuildRequires:  python%{pyver}-six
+BuildRequires:  python3-oslo-i18n
+BuildRequires:  python3-eventlet
+BuildRequires:  python3-six
 # Required for documentation build
-BuildRequires:  python%{pyver}-oslo-config
+BuildRequires:  python3-oslo-config
 # Required for tests
 BuildRequires:  procps-ng
-BuildRequires:  python%{pyver}-fixtures
-BuildRequires:  python%{pyver}-hacking
-BuildRequires:  python%{pyver}-mock
-BuildRequires:  python%{pyver}-requests
-BuildRequires:  python%{pyver}-routes
-BuildRequires:  python%{pyver}-oslotest
-BuildRequires:  python%{pyver}-oslo-log
-BuildRequires:  python%{pyver}-oslo-utils
-BuildRequires:  python%{pyver}-oslo-concurrency
-BuildRequires:  python%{pyver}-yappi
-BuildRequires:  python%{pyver}-webob
-%if %{pyver} == 2
-BuildRequires:  python-paste
-BuildRequires:  python-paste-deploy
-BuildRequires:  python%{pyver}-monotonic
-%else
-BuildRequires:  python%{pyver}-paste
-BuildRequires:  python%{pyver}-paste-deploy
-%endif
+BuildRequires:  python3-fixtures
+BuildRequires:  python3-hacking
+BuildRequires:  python3-mock
+BuildRequires:  python3-requests
+BuildRequires:  python3-routes
+BuildRequires:  python3-oslotest
+BuildRequires:  python3-oslo-log
+BuildRequires:  python3-oslo-utils
+BuildRequires:  python3-oslo-concurrency
+BuildRequires:  python3-yappi
+BuildRequires:  python3-webob
+BuildRequires:  python3-paste
+BuildRequires:  python3-paste-deploy
 
-Requires:       python%{pyver}-eventlet >= 0.22.0
-Requires:       python%{pyver}-greenlet
-Requires:       python%{pyver}-oslo-config >= 2:5.1.0
-Requires:       python%{pyver}-oslo-concurrency >= 3.25.0
-Requires:       python%{pyver}-oslo-i18n >= 3.15.3
-Requires:       python%{pyver}-oslo-log >= 3.36.0
-Requires:       python%{pyver}-oslo-utils >= 3.40.2
-Requires:       python%{pyver}-routes
-Requires:       python%{pyver}-six >= 1.10.0
-Requires:       python%{pyver}-yappi
-Requires:       python%{pyver}-debtcollector
-Requires:       python%{pyver}-webob
-%if %{pyver} == 2
-Requires:       python-paste
-Requires:       python-paste-deploy >= 1.5.0
-Requires:       python%{pyver}-monotonic >= 0.6
-%else
-Requires:       python%{pyver}-paste
-Requires:       python%{pyver}-paste-deploy >= 1.5.0
-%endif
+Requires:       python3-eventlet >= 0.22.0
+Requires:       python3-greenlet
+Requires:       python3-oslo-config >= 2:5.1.0
+Requires:       python3-oslo-concurrency >= 3.25.0
+Requires:       python3-oslo-i18n >= 3.15.3
+Requires:       python3-oslo-log >= 3.36.0
+Requires:       python3-oslo-utils >= 3.40.2
+Requires:       python3-routes
+Requires:       python3-six >= 1.10.0
+Requires:       python3-yappi
+Requires:       python3-debtcollector
+Requires:       python3-webob
+Requires:       python3-paste
+Requires:       python3-paste-deploy >= 1.5.0
 
 
-%description -n python%{pyver}-%{pname}
+%description -n python3-%{pname}
 %{common_desc}
 
-%package -n python%{pyver}-%{pname}-tests
+%package -n python3-%{pname}-tests
 Summary:        Oslo service tests
-%{?python_provide:%python_provide python%{pyver}-%{pname}-tests}
+%{?python_provide:%python_provide python3-%{pname}-tests}
 
-Requires:  python%{pyver}-%{pname} = %{version}-%{release}
+Requires:  python3-%{pname} = %{version}-%{release}
 Requires:  procps-ng
-Requires:  python%{pyver}-fixtures
-Requires:  python%{pyver}-hacking
-Requires:  python%{pyver}-mock
-Requires:  python%{pyver}-requests
-Requires:  python%{pyver}-routes
-Requires:  python%{pyver}-oslotest
+Requires:  python3-fixtures
+Requires:  python3-hacking
+Requires:  python3-mock
+Requires:  python3-requests
+Requires:  python3-routes
+Requires:  python3-oslotest
 
-%description -n python%{pyver}-%{pname}-tests
+%description -n python3-%{pname}-tests
 %{common_desc1}
 
 %if 0%{?with_doc}
 %package -n python-%{pname}-doc
 Summary:        Oslo service documentation
 
-BuildRequires:  python%{pyver}-sphinx
-BuildRequires:  python%{pyver}-openstackdocstheme
+BuildRequires:  python3-sphinx
+BuildRequires:  python3-openstackdocstheme
 
 %description -n python-%{pname}-doc
 Documentation for oslo.service
@@ -124,35 +101,35 @@ Documentation for oslo.service
 %autosetup -n %{pypi_name}-%{upstream_version} -S git
 
 %build
-%{pyver_build}
+%{py3_build}
 
 %if 0%{?with_doc}
 # generate html docs
-%{pyver_bin} setup.py build_sphinx -b html
-# remove the sphinx-build-%{pyver} leftovers
+PYTHONPATH=. sphinx-build -b html doc/source doc/build/html
+# remove the sphinx-build leftovers
 rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %install
 # Must do the subpackages' install first because the scripts in /usr/bin are
 # overwritten with every setup.py install.
-%{pyver_install}
+%{py3_install}
 
 %check
 # FIXME: https://review.openstack.org/279011 seems to break tests in CentOS7,
 # creating an infinite loop
-#%{pyver_bin} setup.py test ||
+#python3 setup.py test ||
 #rm -rf .testrepository
 
-%files -n python%{pyver}-%{pname}
+%files -n python3-%{pname}
 %doc README.rst
 %license LICENSE
-%{pyver_sitelib}/oslo_service
-%{pyver_sitelib}/*.egg-info
-%exclude %{pyver_sitelib}/oslo_service/tests
+%{python3_sitelib}/oslo_service
+%{python3_sitelib}/*.egg-info
+%exclude %{python3_sitelib}/oslo_service/tests
 
-%files -n python%{pyver}-%{pname}-tests
-%{pyver_sitelib}/oslo_service/tests
+%files -n python3-%{pname}-tests
+%{python3_sitelib}/oslo_service/tests
 
 %if 0%{?with_doc}
 %files -n python-%{pname}-doc
