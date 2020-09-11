@@ -29,7 +29,6 @@ BuildRequires:  python3-pbr >= 2.0.0
 BuildRequires:  git
 BuildRequires:  python3-oslo-i18n
 BuildRequires:  python3-eventlet
-BuildRequires:  python3-six
 # Required for documentation build
 BuildRequires:  python3-oslo-config
 # Required for tests
@@ -48,7 +47,7 @@ BuildRequires:  python3-webob
 BuildRequires:  python3-paste
 BuildRequires:  python3-paste-deploy
 
-Requires:       python3-eventlet >= 0.22.0
+Requires:       python3-eventlet >= 0.25.2
 Requires:       python3-greenlet
 Requires:       python3-oslo-config >= 2:5.1.0
 Requires:       python3-oslo-concurrency >= 3.25.0
@@ -56,7 +55,6 @@ Requires:       python3-oslo-i18n >= 3.15.3
 Requires:       python3-oslo-log >= 3.36.0
 Requires:       python3-oslo-utils >= 3.40.2
 Requires:       python3-routes
-Requires:       python3-six >= 1.10.0
 Requires:       python3-yappi
 Requires:       python3-debtcollector
 Requires:       python3-webob
