@@ -39,7 +39,7 @@ Summary:        Oslo service library
 BuildRequires:  python3-devel
 BuildRequires:  python3-setuptools
 BuildRequires:  python3-pbr >= 2.0.0
-BuildRequires:  git
+BuildRequires:  git-core
 BuildRequires:  python3-oslo-i18n
 BuildRequires:  python3-eventlet
 # Required for documentation build
