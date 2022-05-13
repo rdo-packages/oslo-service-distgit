@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x01527a34f0d0080f8a5db8d6eb6c5df21b4b6363
+%global sources_gpg_sign 0xa63ea142678138d1bb15f2e303bdfd64dd164087
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 %global pypi_name oslo.service
 %global pname oslo-service
@@ -12,7 +12,7 @@ Library for running OpenStack services
 Tests for oslo.service
 
 Name:           python-%{pname}
-Version:        2.6.1
+Version:        2.6.2
 Release:        1%{?dist}
 Summary:        Oslo service library
 
@@ -114,6 +114,7 @@ Documentation for oslo.service
 %{gpgverify}  --keyring=%{SOURCE102} --signature=%{SOURCE101} --data=%{SOURCE0}
 %endif
 %autosetup -n %{pypi_name}-%{upstream_version} -S git
+sed -i "s/greenlet.*/greenlet/" requirements.txt
 
 %build
 %{py3_build}
@@ -153,6 +154,9 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %changelog
+* Fri May 13 2022 RDO <dev@lists.rdoproject.org> 2.6.2-1
+- Update to 2.6.2
+
 * Tue Feb 01 2022 RDO <dev@lists.rdoproject.org> 2.6.1-1
 - Update to 2.6.1
 
