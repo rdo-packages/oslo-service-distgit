@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2106996e_9f7fbedb",
+        "filename": "python-oslo-service.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-07-04T13:55:49Z",
+      "side": 1,
+      "message": "is this comment still valid?",
+      "revId": "ae8609b592223bdd70e1f710bbd650bf617c6d20",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
