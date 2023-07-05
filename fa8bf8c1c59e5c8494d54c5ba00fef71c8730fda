@@ -16,6 +16,24 @@
       "message": "additional space",
       "revId": "fa8bf8c1c59e5c8494d54c5ba00fef71c8730fda",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "75f0cb60_86cb6737",
+        "filename": "python-oslo-service.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-07-05T17:04:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "98262673_885ce64c",
+      "revId": "fa8bf8c1c59e5c8494d54c5ba00fef71c8730fda",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
