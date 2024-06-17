@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x2ef3fe0ec2b075ab7458b5f8b702b20b13df2318
+%global sources_gpg_sign 0xf8675126e2411e7748dd46662fc2093e4682645f
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 # we are excluding some BRs from automatic generator
 %global excluded_brs doc8 bandit pre-commit hacking flake8-import-order
@@ -19,7 +19,7 @@ Library for running OpenStack services
 Tests for oslo.service
 
 Name:           python-%{pname}
-Version:        3.4.0
+Version:        3.4.1
 Release:        1%{?dist}
 Summary:        Oslo service library
 
@@ -142,6 +142,9 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %changelog
+* Mon Jun 17 2024 RDO <dev@lists.rdoproject.org> 3.4.1-1
+- Update to 3.4.1
+
 * Thu Mar 14 2024 RDO <dev@lists.rdoproject.org> 3.4.0-1
 - Update to 3.4.0
 
