@@ -57,7 +57,6 @@ Requires:  python3-%{pname} = %{version}-%{release}
 Requires:  procps-ng
 Requires:  python3-fixtures
 Requires:  python3-hacking
-Requires:  python3-mock
 Requires:  python3-requests
 Requires:  python3-routes
 Requires:  python3-oslotest
