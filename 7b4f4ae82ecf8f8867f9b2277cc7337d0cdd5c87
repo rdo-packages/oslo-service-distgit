@@ -16,6 +16,24 @@
       "message": "In this case, it should be python3-%{pname}, see line 14.\n\nAlso, this will need to get cotyledon updated in rdo to pass.",
       "revId": "7b4f4ae82ecf8f8867f9b2277cc7337d0cdd5c87",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4b41872e_71c8d55c",
+        "filename": "python-oslo-service.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 580
+      },
+      "writtenOn": "2025-06-13T08:14:34Z",
+      "side": 1,
+      "message": "Yeah, I see this now, my bad.\n\nWhat does it mean \"to get cotyledon updated in rdo\"? To have it in rdoinfo?",
+      "parentUuid": "760697c4_c0493e82",
+      "revId": "7b4f4ae82ecf8f8867f9b2277cc7337d0cdd5c87",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
