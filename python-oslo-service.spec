@@ -122,6 +122,7 @@ PYTHONPATH="%{buildroot}/%{python3_sitelib}"
 rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
+%pyproject_extras_subpkg -n python3-%{pkg_name} threading
 
 %check
 %tox -e %{default_toxenv}
