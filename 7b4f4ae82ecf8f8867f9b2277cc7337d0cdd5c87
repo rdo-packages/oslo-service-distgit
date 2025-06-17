@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "611ab9ff_71c9d586",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2025-06-17T14:41:43Z",
+      "side": 1,
+      "message": "recheck cotyledon included in centos10-flamingo with https://review.rdoproject.org/r/c/rdoinfo/+/57844",
+      "revId": "7b4f4ae82ecf8f8867f9b2277cc7337d0cdd5c87",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "760697c4_c0493e82",
