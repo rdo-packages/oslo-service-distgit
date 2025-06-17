@@ -143,3 +143,4 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/oslo.service/commit/226fe87b907bfa5ec6a20fbff821c89313e61649
