@@ -1,0 +1,8 @@
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Workflow+1: Yatin Karel <ykarel@redhat.com>
+Code-Review+2: Yatin Karel <ykarel@redhat.com>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Wed, 18 Jun 2025 04:53:42 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/oslo-service-distgit/+/57832
+Project: openstack/oslo-service-distgit
+Branch: refs/heads/rpm-master
